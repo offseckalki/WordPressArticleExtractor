@@ -34,9 +34,18 @@ WordPress Article Extractor is a Python script designed to extract articles from
    ```
 
 2. Enter your MySQL User when prompted.
+   
+   ![Screenshot from 2024-04-15 00-49-11](https://github.com/offseckalki/WordPressArticleExtractor/assets/61248381/dbd73c0b-a319-4ad4-a4b3-e0cbff77d8b7)
+
 3. Enter your MySQL Password when prompted.
+   ![Screenshot from 2024-04-15 00-49-42](https://github.com/offseckalki/WordPressArticleExtractor/assets/61248381/fff04ce6-ab87-4ce4-9c82-2e856b7367d3)
+
 4. Enter your MySQL Database_Name when prompted.
+   ![Screenshot from 2024-04-15 00-49-58](https://github.com/offseckalki/WordPressArticleExtractor/assets/61248381/2ef3f24e-b9cf-4560-8641-44692cbede28)
+
 5. The script will extract articles from the database and save each article as a separate text file in the current directory.
+   ![Screenshot from 2024-04-15 00-50-38](https://github.com/offseckalki/WordPressArticleExtractor/assets/61248381/6263bec8-a4a9-43d9-9400-6be1d98aa0a0)
+
 
 ## License
 
