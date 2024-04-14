@@ -42,4 +42,4 @@ WordPress Article Extractor is a Python script designed to extract articles from
 ## License
 
 This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
-```
+
