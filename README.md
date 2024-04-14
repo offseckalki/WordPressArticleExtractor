@@ -16,16 +16,20 @@ Requirements:
     BeautifulSoup4
 
 Usage:
+Install the required Python packages:
 
-    Install the required Python packages:
+    
+    pip install mysql-connector-python beautifulsoup4
+    python SQL_POST_EXT.py
 
-pip install mysql-connector-python beautifulsoup4
+
+
 
 Modify the db_config dictionary in the script to match your MySQL database configuration.
 
 Run the script:
+    python SQL_POST_EXT.py
 
-python SQL_POST_EXT.py
 
 Enter your MySQL password when prompted.
 
