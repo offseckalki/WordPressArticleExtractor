@@ -1,4 +1,4 @@
-```
+
 # WordPress Article Extractor
 
 ## Description
