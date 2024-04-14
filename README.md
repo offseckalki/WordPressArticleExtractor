@@ -28,16 +28,15 @@ WordPress Article Extractor is a Python script designed to extract articles from
 
 ## Usage
 
-1. Modify the `db_config` dictionary in the script to match your MySQL database configuration.
-
-2. Run the script:
+1. Run the script:
    ```sh
    python SQL_POST_EXT.py
    ```
 
-3. Enter your MySQL password when prompted.
-
-4. The script will extract articles from the database and save each article as a separate text file in the current directory.
+2. Enter your MySQL User when prompted.
+3. Enter your MySQL Password when prompted.
+4. Enter your MySQL Database_Name when prompted.
+5. The script will extract articles from the database and save each article as a separate text file in the current directory.
 
 ## License
 
