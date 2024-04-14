@@ -3,17 +3,29 @@ from getpass import getpass
 from bs4 import BeautifulSoup
 import os
 
+# Function to get MySQL username and database name from user input
+def get_mysql_credentials():
+    username = input("Enter the MySQL username: ")
+    database = input("Enter the MySQL database name: ")
+    return username, database
+
 # MySQL database configuration
 db_config = {
     'host': 'localhost',
-    'user': 'your_username',
-    'database': 'wordpress_database'
+    'user': '',
+    'database': ''
 }
 
 def connect_to_database():
     try:
+        # Get MySQL username and database name from user input
+        username, database = get_mysql_credentials()
         password = getpass("Enter the MySQL password: ")
+        
+        db_config['user'] = username
         db_config['password'] = password 
+        db_config['database'] = database
+        
         # Connect to MySQL database
         conn = mysql.connector.connect(**db_config)
         return conn
