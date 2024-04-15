@@ -37,13 +37,13 @@ def extract_articles(conn):
     try:
         cursor = conn.cursor()
 
-        # Query to retrieve all articles from wp_posts table
-        query = "SELECT ID, post_content FROM wp_posts WHERE post_type = 'post' AND post_status = 'publish';"
+        # Query to retrieve post title and content from wp_posts table
+        query = "SELECT ID, post_title, post_content FROM wp_posts WHERE post_type = 'post' AND post_status = 'publish';"
         cursor.execute(query)
 
         articles = []
-        for (post_id, post_content) in cursor:
-            articles.append((post_id, post_content))
+        for (post_id, post_title, post_content) in cursor:
+            articles.append((post_id, post_title, post_content))
 
         cursor.close()
         return articles
@@ -58,11 +58,11 @@ def convert_to_plain_text(html_content):
     # Extract plain text
     return soup.get_text()
 
-def save_article_to_file(post_id, plain_text):
-    file_name = f"article_{post_id}.txt"
+def save_article_to_file(post_id, post_title, plain_text):
+    file_name = f"{post_title}.txt"
     with open(file_name, "w") as file:
         file.write(plain_text)
-    print(f"Article {post_id} saved to {file_name}")
+    print(f"Article {post_title} saved to {file_name}")
 
 def main():
     # Connect to MySQL database
@@ -74,9 +74,9 @@ def main():
     articles = extract_articles(conn)
 
     # Convert HTML content to plain text and save each article to a file
-    for post_id, article_content in articles:
+    for post_id, post_title, article_content in articles:
         plain_text = convert_to_plain_text(article_content)
-        save_article_to_file(post_id, plain_text)
+        save_article_to_file(post_id, post_title, plain_text)
 
     # Close database connection
     conn.close()
